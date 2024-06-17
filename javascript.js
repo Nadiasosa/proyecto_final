@@ -32,3 +32,29 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+/*barra de navegacion*/
+function myLinksAnchors(h){
+  var h = window.matchMedia("(max-width: 768px)")
+  if (h.matches){
+  myLinks();
+  anchors();
+  }
+}
+
+function myLinks() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function anchors(){
+  var f = document.getElementById("myLinksAnchor");
+  if (f.className === "display") {
+    f.className += " myLinks";
+  } else {
+    f.className = "display";
+  }
+}
